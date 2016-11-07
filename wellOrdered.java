@@ -1,3 +1,7 @@
+/* This program takes every three digit number and checks it to see if it is a well ordered number.
+An example of a number that is well ordered is 123, an example of a number that is not well ordered is 143. 
+*/
+
 public class wellOrdered {
 	public static void main(String args[]) {
 
@@ -27,6 +31,6 @@ public class wellOrdered {
 
 		}
 
-	System.out.println(count);
+	System.out.println("The number of 3 digit well ordered numbers is " +count);
 	}
 }
