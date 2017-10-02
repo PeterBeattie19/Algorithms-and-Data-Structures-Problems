@@ -1,2 +1,3 @@
-# My-Code
-List of programs written by me. 
+# Java-Code
+Collection of famous algorithms, data structures and challenges written in java. 
+
