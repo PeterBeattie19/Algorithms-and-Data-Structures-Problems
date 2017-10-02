@@ -1,3 +1,20 @@
+/* Given a 2D array, find the maximum sum of every hour glass in the array 
+   An hour glass looks like this 111
+                                  1
+                                 111
+  In the array: 000000 the hour glass with the largest sum is 456. Print the largest sum. 
+                004560                                         3
+                000300                                        123
+                001230
+               */ 
+
+
+
+
+
+
+
+
 import java.util.*;
 
 public class TwoDHourGlass {
