@@ -9,16 +9,10 @@ public class RemoveDuplicateChars {
 
   public static String removeDups(String s){
     Set<Character> set = new HashSet<Character>();
+     String newString = "";
 
     for(int i = 0; i<s.length(); i++){
-      set.add(s.charAt(i));
-    }
-
-    Iterator it = set.iterator();
-    String newString = "";
-
-    while(it.hasNext()){
-      newString = newString + String.valueOf(it.next());
+      if(set.add(s.charAt(i))!=false) newString = newString + String.valueOf(s.charAt(i));
     }
 
     return newString;
