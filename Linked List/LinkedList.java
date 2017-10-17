@@ -6,6 +6,10 @@ public class LinkedList{
     head = new NodeL(data);
   }
   public LinkedList(){}
+  
+  public boolean isEmpty(){
+    return (head==null); 
+  }
 
     //insert a node into the end of the list.
   public void insert(int data){
@@ -24,7 +28,7 @@ public class LinkedList{
   }
 }
 
-  public void delete(int n){
+  public void delete(int n){ //Finds the link to be deleted, points previous link to next link, (finds the link by using the data variable in the node class)
     NodeL prev = head;
     NodeL cur = head;
 
@@ -36,7 +40,7 @@ public class LinkedList{
     prev.next = cur.next; //when we find the node to be deleted we point the previous node to the next node in the list.
   }
 
-  public NodeL returnHead() { return this.head; }
+  public NodeL returnHead() { return this.head; } //Returns the head node of the linked list 
 
   public void reverseList() {
     this.head = ReversePrivate(this.head); } //Public method to reverse a list, calls private method
