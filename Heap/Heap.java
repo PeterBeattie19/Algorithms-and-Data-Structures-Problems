@@ -24,15 +24,15 @@ public class Heap {
   }
 
   public void trickleUp(int index){
-    int parent = (index-1)/2;
-    Node bottom = heapArray[index];
+    int parent = (index-1)/2; //Parent of newly inserted node 
+    Node bottom = heapArray[index]; //New inserted Node 
 
-    while(index>0 && heapArray[parent].getKey() < bottom.getKey()){
-      heapArray[index] = heapArray[parent];
-      index = parent;
-      parent = (parent-1)/2;
+    while(index>0 && heapArray[parent].getKey() < bottom.getKey()){ //Loop while we're still in the array and the current node's key is greater than its parent
+      heapArray[index] = heapArray[parent]; //Move parent to the index 
+      index = parent; //change index to previous parent's index 
+      parent = (parent-1)/2; //change parent, move it up the heap 
     }
-    heapArray[index] = bottom;
+    heapArray[index] = bottom; //Loop ends and we have found the new location fir the node 
   }
 
   public Node remove(){
