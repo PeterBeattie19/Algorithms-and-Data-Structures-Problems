@@ -11,6 +11,10 @@ Contents
               LinkedList.java
               NodeL.java
               TestLinkedList.java
+        Heap
+              Heap.java
+              Node.java
+              TestHeap.java
               
         Ackermann's Function
               Aackermann.java
