@@ -12,7 +12,8 @@ Contents
               NodeL.java
               TestLinkedList.java
         Heap
-              Heap.java
+              HeapMax.java
+              HeapMin.java
               Node.java
               TestHeap.java
               
@@ -31,3 +32,5 @@ Contents
               
         2D Hour Glass problem, searching an array for the largest hourglass sum, see code for examples 
               TwoDHourGlass.java 
+              
+        Mote Carlo Dice Simulation 
