@@ -4,12 +4,18 @@ public class TestHeap {
   public static void main(String[] args) {
     Random ran = new Random();
 
-    Heap h = new Heap(30);
 
-    for(int i = 0; i<30; i++){
-      h.insert(ran.nextInt(30));
+    int size = 10;
+    HeapMin h = new HeapMin(size);
+    int arr[] = new int[size];
+    for(int i = 0; i<size; i++){
+      int val = 1 + ran.nextInt(100);
+      h.insert(val);
     }
 
-    h.displayHeap();
+    for(int i = 0; i<size; i++){
+      arr[i] = h.remove().getKey();
+      System.out.print(arr[i]+ " ");
+    }
   }
 }
