@@ -1,4 +1,4 @@
-public class Heap {
+public class HeapMax {
 
   private Node heapArray[];
   private int maxSize;
