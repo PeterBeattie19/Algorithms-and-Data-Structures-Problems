@@ -41,6 +41,20 @@ public class HeapMin {
     trickleDown(0);
     return root;
   }
+  
+    public void remove(int key){
+    int index = 0;
+
+    while(index < currentSize){
+      if(heapArray[index].getKey() == key) break;
+      index++;
+    }
+
+    if(index == currentSize) return;
+
+    heapArray[index] = heapArray[--currentSize];
+    trickleDown(index); 
+  }
 
   public void trickleDown(int index){
     int smallerChild;
