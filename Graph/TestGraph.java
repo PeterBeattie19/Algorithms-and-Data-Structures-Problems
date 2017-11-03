@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class TestGraph {
   public static void main(String[] args) {
-    Graph g = new Graph(7);
+    Graph g = new Graph(8);
 
     //ADD IN THE NODES TO THE GRAPH
-    for(int i = 1; i<=7; i++){
+    for(int i = 1; i<=8; i++){
       g.add(i);
     }
 
@@ -17,10 +17,13 @@ public class TestGraph {
     g.connect(4, 5, 6, 3); //Node 5
     g.connect(5, 4, 6); //Node 6
     g.connect(6, 0, 5, 4, 3); //Node 7
+    
+    //NOTE THE NODE CONTAINING THE NUMBER 8 IS NOT CONNECTED TO ANYTHING 
 
     //GRAPH IS NOW CREATED
     g.printGraph();
-  System.out.println(g.isPathDFS(0, 4));
+    System.out.println(g.isPathDFS(0, 4)); //Returns true 
+    System.out.println(g.pathBFS(0,7)); //Returns false 
 
 
   }
