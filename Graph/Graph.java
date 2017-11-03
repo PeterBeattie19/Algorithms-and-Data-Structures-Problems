@@ -25,11 +25,10 @@ public class Graph {
 
   public boolean isPathDFS(int from, int to){
     Set<Node> visited = new HashSet<Node>();
-  //  visited.add(graph[from]);
     return path(graph[from], graph[to], visited);
   }
 
-  public boolean path(Node from, Node to, Set<Node> visited){
+  private boolean path(Node from, Node to, Set<Node> visited){
     if(visited.contains(from) == true) return false;
 
     if(from == to) return true;
@@ -41,6 +40,33 @@ public class Graph {
       if(path(n, to, visited)) return true;
     }
     return false;
+  }
+
+  public boolean isPathBFS(int from, int to){
+    return pathBFS(graph[from], graph[to]); 
+  }
+
+  private boolean pathBFS(Node from, Node to){
+    Set<Node> visited = new HashSet<Node>();
+    if(from == to) return true;
+
+    LinkedList<Node> nextUp = new LinkedList<Node>();
+    addAdjacent(from.getAdjacent(), nextUp);
+    visited.add(from);
+
+    while(nextUp.size() != 0) {
+      Node current = nextUp.poll();
+      if(visited.contains(current)) continue;
+      visited.add(current);
+      if(current == to) return true;
+
+      addAdjacent(current.getAdjacent(), nextUp);
+    }
+    return false;
+  }
+
+  public void addAdjacent(LinkedList<Node> list, LinkedList<Node> q){
+    for(Node n: list) q.add(n);
   }
 
   public void printGraph(){
