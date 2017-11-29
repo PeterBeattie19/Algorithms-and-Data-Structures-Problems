@@ -1,7 +1,9 @@
 # Java-Code
 Collection of famous algorithms, data structures and challenges written in java. 
 
-Contents 
+
+        Contents 
+        
         Binary Search Tree
               BinarySearchTree.java
               Node.java
@@ -26,10 +28,16 @@ Contents
         Queue
               Node.java
               Queue.java
+              
         Priority Queue
                 Node.java
                 PriorityQueue.java
                 HeapMin.java
+                
+        Trie
+                Node.java
+                BingIton.java "kattis problem that uses a trie"
+        
               
         Ackermann's Function
               Aackermann.java
