@@ -11,11 +11,25 @@ Contents
               LinkedList.java
               NodeL.java
               TestLinkedList.java
+        Generic Linked List
+              GenericLinkedList.java
+              Node.java
+              
         Heap
               HeapMax.java
               HeapMin.java
               Node.java
               TestHeap.java
+        Stack
+              Node.java
+              Stack.java
+        Queue
+              Node.java
+              Queue.java
+        Priority Queue
+                Node.java
+                PriorityQueue.java
+                HeapMin.java
               
         Ackermann's Function
               Aackermann.java
