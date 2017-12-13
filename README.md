@@ -56,3 +56,9 @@ Collection of famous algorithms, data structures and challenges written in java.
               TwoDHourGlass.java 
               
         Mote Carlo Dice Simulation 
+        
+        MergSort
+        
+        MergeSort with Insertion Sort
+        
+        Sleep Sort
