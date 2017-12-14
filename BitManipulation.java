@@ -5,6 +5,8 @@ public class BitManipulation {
 		System.out.println(1234^1234); //Output: 0 , Numbers are the same
 
 		System.out.println(21 & 21); 
+		
+		System.out.println(n&1); // --> 1 if n is odd, 0 if n os even 
 
 	}
 }
