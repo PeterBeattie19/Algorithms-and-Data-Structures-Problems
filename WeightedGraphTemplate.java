@@ -12,6 +12,18 @@ public class WeightedGraphTemplate{
 		//For Example: graph[2]: Edge(3,5) -> Edge(4,7) , this means nodes number 2 is connected to two other nodes,
 		//it connects to node 2 with a weight of 5 and node 4 with a weight of 7
 
+
+		PriorityQueue<Edge> prims = new PriorityQueue<Edge>(new Comparator<Edge> (){
+        	public int compare(Edge x, Edge y){
+            	if(x.weight == y.weight) return 0; 
+
+            	return y.weight - x.weight; 
+        	} 
+		}); 
+
+
+
+		
 		String line[] = br.readLine().split(" "); 
 
 		int numNodes = Integer.parseInt(line[0]); 
@@ -40,6 +52,12 @@ public class WeightedGraphTemplate{
 		public Edge(int d, int w){
 			destination = d; 
 			weight = w; 
+		}
+
+		public int compare(Edge other){
+			if(this.weight == other.weight) return 0;
+
+			return this.weight - pther.weight; 
 		}
 	}
 } 
