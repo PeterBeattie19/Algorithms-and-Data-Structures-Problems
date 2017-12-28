@@ -1,5 +1,5 @@
 import java.util.*; 
-
+//Regular mergesort is faster, don't waste your time putting insertion as one of the base cases in the mergesort method
 public class MergeSortWithInsertion {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in); 
