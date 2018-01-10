@@ -1,3 +1,4 @@
+#Foo bar Queston 
 arr = list(map(int, input().split()))
 t = int(input())
 
