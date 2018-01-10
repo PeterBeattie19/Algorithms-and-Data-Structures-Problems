@@ -1,6 +1,6 @@
 import java.util.*; 
 import java.io.*; 
-
+//solve cinvex hull problrem using jarvis' algorithm, does not work for kattis question
 public class ConvexHull_Jarvis {
 	public static void main (String args[]) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
