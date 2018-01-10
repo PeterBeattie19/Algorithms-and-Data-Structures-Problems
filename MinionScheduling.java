@@ -1,6 +1,6 @@
 import java.util.*; 
 import java.io.*; 
-
+//Foo Bar Question
 public class MinionScheduling {
 	public static void main (String args[]) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
