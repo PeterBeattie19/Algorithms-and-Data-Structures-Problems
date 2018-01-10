@@ -1,3 +1,4 @@
+#foo bar queston 
 s = input()
 
 r = 0 #how many going to the right
