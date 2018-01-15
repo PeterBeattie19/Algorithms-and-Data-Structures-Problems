@@ -1,70 +1,69 @@
-import java.util.Random;
+public class  MergeSort {
+	public static void main(String args[]){
 
-public class MergeSort {
-  public static void main(String[] args) {
-    Random ran = new Random();
+		int arr[] = {1,5,3,64,2,4,6,5,7,8,4,6,2,4,6,5,7,8,9};
 
-    int arr[] = new int[10];
+		mergesort(arr,0,arr.length-1); 
 
-    for(int i = 0; i<10; i++){
-      arr[i] = ran.nextInt(50);
-    }
+		for(int i: arr)
+			System.out.print(i +" "); 
 
-    mergesort(arr);
-    print(arr);
-  }
 
-  public static void mergesort(int arr[]){
-    int temp[] = new int[arr.length];
-    mergesort(arr, temp, 0, arr.length-1);
-  }
 
-  public static void mergesort(int arr[], int temp[], int leftStart, int rightStart){
-    if(leftStart >= rightStart){
-      return;
-    }
+	}
 
-    int middle = (leftStart + rightStart) / 2;
+	public static void mergesort(int arr[], int l, int r){
+		if(l < r){
+			int m = (l+r)/2;
 
-    mergesort(arr, temp, leftStart, middle);
-    mergesort(arr, temp, middle+1, rightStart);
+			mergesort(arr,l,m); 
+			mergesort(arr,m+1,r); 
 
-    mergeHalves(arr, temp, leftStart, rightStart);
-  }
+			merge(arr,l,m,r); 
+		}
+	}
 
-  public static void mergeHalves(int arr[], int temp[], int leftStart, int rightEnd){
-    int leftEnd = (rightEnd + leftStart) / 2;  //Middle point in array
-    int rightStart = leftEnd + 1; //mid point plus 1
-    int size = rightEnd - leftStart + 1;
+	public static void merge(int arr[], int l, int m, int r){
+		int n1 = m - l + 1; 
+		int n2 = r - m;
 
-    int left = leftStart;
-    int right = rightStart;
-    int index = leftStart;
+		int left[] = new int[n1];
+		int right[] = new int[n2]; 
 
-    while(left <= leftEnd && right <= rightEnd){
-      if(arr[left] <= arr[right]){
-        temp[index] = arr[left];
-        left++;
-      }
+		for(int i = 0; i<n1; i++)
+			left[i] = arr[l+i];
 
-      else {
-        temp[index] =arr[right];
-        right++;
-      }
+		for(int i = 0; i<n2; i++)
+			right[i] = arr[m+i+1]; 
 
-      index++;
-    }
+		int i = 0, j = 0, k = l; 
 
-    System.arraycopy(arr, left, temp, index, leftEnd - left + 1);
-    System.arraycopy(arr, right, temp, index, rightEnd - right + 1);
-    System.arraycopy(temp, leftStart, arr, leftStart, size);
-  }
+		while(i<n1 & j<n2){
+			if(left[i] <= right[j]){
+				arr[k] = left[i];
+				i++;
+			}
 
-  public static void print(int arr[]){
-    for(int i: arr){
-      System.out.print(i +" ");
-    }
+			else{
+				arr[k] = right[j];
+				j++;
+			}
 
-    System.out.println();
-  }
-}
+			k++; 
+		}
+
+		while(i < n1){
+			arr[k] = left[i]; 
+			i++;
+			k++;
+		}
+
+		while(j < n2){
+			arr[k] = right[j];
+			j++;
+			k++;
+		}
+
+
+	}
+} 
