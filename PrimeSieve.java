@@ -15,7 +15,6 @@ public class PrimeSieve {
 		primes.flip(0,cap); 
 
 		primes.set(1,false);
-	//	primes.set(cap)
 
 		for(long i = 2; i<cap; i++){
 			if(primes.get(i) == true){
