@@ -46,22 +46,13 @@ int findCount( node * n, char* s, int index){
 }
 
 int main() {
-   node* n = new node(); 
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+  node* n = new node(); 
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
 
   int t;
   cin >> t; 
-
-  for(int i = 0; i<t; i++){
-    char * line = new char[32]; 
-
-    cin >> line; 
-
-    add(n, line, 0);
-
-    printf("%d\n", findCount(n,line,0)-1);
-}
+  char * line = new char[32];
 
   return 0; 
 }
