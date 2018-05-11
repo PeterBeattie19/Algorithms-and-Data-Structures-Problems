@@ -44,10 +44,9 @@ public static void quickSort(int arr[], int low, int high){
     }
 
     if(i<=j){ //IF i HASN'T PASSED j (AND VICE VERSA) SWAP THE ELEMENTS
-      swap(i,j, arr);
+      swap(i,j, arr);//BE CAREFUL WHEN SWAPPIING OBJECTS, JAVA AINT GREAT
       i++;
       j--;
-      //print();
     }
   }
 
