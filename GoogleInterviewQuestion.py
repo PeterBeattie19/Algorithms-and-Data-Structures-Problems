@@ -17,3 +17,5 @@ for i in range(len(arr)):
 		break
 
 print(p1,p2) 
+
+#Big O complexity would be O(N), where N is the number of elements in the list, the coefficient of N would be 2, as we scan through the array twice. 
